@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Config/etc/system_file.xsd">
+    <system>
+        <section id="shipping_config_section" translate="label" sortOrder="500" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Shipping Method Config</label>
+            <tab>sales</tab>
+            <resource>Dev_DefaultShippingMethod::shipping_method_default_config</resource>
+            <group id="default_config_group" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Shipping Methods Default</label>
+                <field id="shipping_method_list" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Select Shipping Method</label>
+                    <source_model>Dev\DefaultShippingMethod\Model\Config\Source\ShippingMethods</source_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
